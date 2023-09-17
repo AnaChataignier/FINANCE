@@ -22,7 +22,7 @@
                 {% for conta in contas %}
                 <div class="lista-contas-main">
                     <span><img width="10%" src="{{conta.icone.url}}">&nbsp&nbsp{{conta}} - {{conta.banco}}</span>
-                    <span class="total-conta positivo ">{{conta.valor}}&nbsp&nbsp&nbsp <a href="/perfil/deletar_banco/{{conta.id}}"><img src="{% static 'perfil/img/trash3.svg' %}"></a></span>
+                    <span class="total-conta positivo ">{{conta.valor}}&nbsp&nbsp&nbsp <a href="/deletar_banco/{{conta.id}}"><img src="{% static 'perfil/img/trash3.svg' %}"></a></span>
                 </div>
                 <br>
                 {% endfor %}
@@ -98,7 +98,7 @@
                     {% for categoria in categorias %}    
                         <div class="lista-contas-main">
                             <span>{{categoria}}</span>
-                            <span class="total-conta"><a href="{% url 'update_categoria' categoria.id %}"><img src="{% if categoria.essencial %}{% static 'perfil/img/check.png' %}{% else %}{% static 'perfil/img/exit.png' %}{% endif %}"></a><a href="/perfil/deletar_categoria/{{categoria.id}}"><img src="{% static 'perfil/img/trash3.svg' %}"></a></span>
+                            <span class="total-conta"><a href="{% url 'update_categoria' categoria.id %}"><img src="{% if categoria.essencial %}{% static 'perfil/img/check.png' %}{% else %}{% static 'perfil/img/exit.png' %}{% endif %}"></a><a href="/deletar_categoria/{{categoria.id}}"><img src="{% static 'perfil/img/trash3.svg' %}"></a></span>
                         </div>
                         <br>
                     {% endfor %}
