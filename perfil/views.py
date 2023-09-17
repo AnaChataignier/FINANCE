@@ -23,7 +23,7 @@ def home(request):
     for valor in contas_mensais:
         total_mensal += valor.valor
         
-    total_livre = total_entradas - (total_mensal + total_saidas)
+    total_livre = total_entradas -  total_saidas
     
     return render(request, 'home.html', {'contas': contas, 'saldo_total' : saldo_total,'total_entradas':total_entradas, 'total_saidas':total_saidas, 'percentual_gastos_essenciais': int(percentual_gastos_essenciais), 'percentual_gastos_nao_essenciais': int(percentual_gastos_nao_essenciais), 'total_mensal': total_mensal, 'total_livre': total_livre})
 
